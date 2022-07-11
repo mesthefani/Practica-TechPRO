@@ -1,0 +1,193 @@
+html{
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header{
+    background-color: black;
+}
+
+.header{
+    display: flex;
+    padding-bottom: 10%;
+    justify-content: center;
+}
+.header .titulo-header{
+    padding-top: 8%;
+}
+.header .imagen-header img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding-top: 5%;
+}
+
+
+.header .titulo-header h1{
+    font-size: 60px;
+    background:  linear-gradient(to left, blue, green);
+    background-clip:text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.header .titulo-header h2, p{
+    color: white;
+}
+.header .titulo-header p{
+    white-space:pre-line;
+    font-size: smaller;
+}
+
+.precio-header{
+    display: flex;
+    color: white;
+}
+
+.precio-header h2{
+    font-size: 35px;
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+/**body***********************************/
+.informacion{
+    display:flex;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 3%;
+}
+
+.informacion h2{
+    color: royalblue;
+}
+.informacion p{
+    color: black;
+    font-size: smaller;
+    text-align: justify;
+}
+.sonido, .garantia, .bateria{
+    text-align: center;
+    padding: 2%;
+}
+
+.techpro-container{
+    display: flex;
+}
+
+.techpro-container .imagen-sobre-techpro img{
+    max-width: 100%;
+    max-height: auto;
+    object-fit: cover;
+    order: 0;
+}
+.techpro-container .sobre-techpro {
+    display: block;
+    background-color: royalblue;
+    padding-top: 8%;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 80%;
+    order: 0;
+}
+
+.techpro-container .sobre-techpro h2{
+    color: white;
+    font-size: 30px;
+}
+.techpro-container .sobre-techpro p{
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.elige-tech{
+    text-align: center;
+    margin: 2%;
+    font-size: 40px;
+    font-weight: bold;
+    color: royalblue;
+}
+.tipos-techpro{
+    display: flex;
+    justify-content: center;
+    
+}
+.izquierda .tipo-izq{
+    background-color:lightgray;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    margin: 5%;
+    justify-content: space-around;
+    border-radius: 6px;
+}
+.izquierda .tipo-izq h3, h5{
+    color: royalblue;
+    font-weight: bold;
+}
+
+.tipos-techpro .tipo-der{
+    background-color: royalblue;
+    width: 400px;
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.tipos-techpro .tipo-der h3, h1{
+    color: white;
+    font-weight: bold;
+}
+
+/******************************* responsive ***********************************/
+
+@media screen and (max-width:880px){
+    .header{
+        display: block;
+    }
+    .header .imagen-header{
+        padding-left: 5%;
+    }
+    .header .titulo-header{
+        text-align: center;
+    }
+    .header .titulo-header .precio-header{
+        justify-content: center;
+    }
+    .informacion{
+        display: block;
+    }
+}
+
+ @media screen and (max-width:990px){
+    .techpro-container{
+        flex-direction: column-reverse;
+    }
+
+    .techpro-container .sobre-techpro{
+        text-align: center;
+        padding-bottom: 10%;
+        width: 100%;
+    }
+    .techpro-container .sobre-techpro img{
+        order: 1;
+    }
+    
+ }
