@@ -120,40 +120,83 @@ header{
     font-weight: bold;
     color: royalblue;
 }
+
 .tipos-techpro{
     display: flex;
+    max-height: auto;
     justify-content: center;
-    
 }
-.izquierda .tipo-izq{
+
+
+.tipos-techpro .izquierda .tipo-izq{
     background-color:lightgray;
     width: 300px;
     height: 100px;
     display: flex;
-    margin: 5%;
     justify-content: space-around;
     border-radius: 6px;
+    margin: 2%;
 }
-.izquierda .tipo-izq h3, h5{
+.tipos-techpro .izquierda .tipo-izq h3, h5{
     color: royalblue;
     font-weight: bold;
 }
 
-.tipos-techpro .tipo-der{
+.tipos-techpro .derecha{
+    display: flex;
+    padding-left: 2%;
+}
+
+.tipos-techpro .derecha .tipo-der{
     background-color: royalblue;
     width: 400px;
-    margin-top: 1%;
-    margin-left: 2%;
-    margin-bottom: 1%;
     border-radius: 6px;
     display: flex;
     justify-content: space-around;
     align-items:center;
 }
 
-.tipos-techpro .tipo-der h3, h1{
+.tipos-techpro .derecha .tipo-der h3, h1{
     color: white;
     font-weight: bold;
+}
+
+.actualizacion {
+    display: flex;
+}
+.actualizacion img{
+  max-width: 100%;
+  max-height: auto;
+}
+
+.actualizacion .texto-act .h3-p h3, .parrafo{
+    color: black;
+    margin-left: 10%;
+}
+
+.texto-act p{
+    padding-right: 40%;
+    line-height: 1.6;
+}
+.actualizacion .texto-act .email{
+    padding-left: 10%;
+}
+
+.actualizacion .texto-act .email input, button{
+    width: 50%;
+}
+.actualizacion .texto-act .email input{
+    height: 8%;
+}
+.actualizacion .texto-act .email button{
+    height: 10%;
+    border: 0;
+    background-color: royalblue;
+    color: white;
+    font-weight: bold;
+}
+h5{
+    text-align: center;
 }
 
 /******************************* responsive ***********************************/
@@ -186,8 +229,36 @@ header{
         padding-bottom: 10%;
         width: 100%;
     }
-    .techpro-container .sobre-techpro img{
-        order: 1;
-    }
     
- }
+    .tipos-techpro{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .tipos-techpro .derecha{
+        width: 310px;
+        height: 110px;
+    }
+    .tipos-techpro .tipo-der object{
+        width: 90px;
+        height: 90px;
+    }
+    .tipos-techpro .tipo-der h3, h1{
+        font-size: medium;
+    }
+    .actualizacion{
+        display: block;
+    }
+    .actualizacion .texto-act .h3-p h3{
+       font-size: 5em;
+    }
+    .actualizacion .texto-act .h3-p p{
+        text-align: justify;
+        font-size: 2em;
+        padding-right: 5%;
+    }
+    .actualizacion .texto-act .email input, button{
+        width: 95%;
+    }
+}
+
+    
